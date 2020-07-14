@@ -1,0 +1,178 @@
+.nav {
+  display: inline-flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.logo2 {
+  margin-left: 18px;
+  font-family: "Odibee Sans", cursive;
+  font-size: 2em;
+  align-self: center;
+}
+
+.logo2 a {
+  color: #e8e8f2;
+}
+
+.border-logo {
+  margin-left: 55%;
+  margin-top: 10px;
+  border-top: solid 4px #fdcba8;
+  padding-top: 5px;
+}
+
+.border-logo img {
+  padding-left: 20px;
+}
+
+.border-logo:after {
+  content: '';
+  height: 4px;
+  background: #fdcba8;
+  position: absolute;
+  width: 50px;
+  top: 38px;
+}
+
+.border-logo:before {
+  content: '';
+  height: 4px;
+  background: #fdcba8;
+  position: absolute;
+  width: 290px;
+  top: 72px;
+  left: 500px;
+}
+
+.my-ship {
+/*  display: inline-flex; */
+  display: none;
+  flex-direction: column;
+}
+
+.my-orders {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.7rem;
+  display: inline-flex;
+  color: rgba(232, 232, 242, 1);
+}
+
+.orders {
+  margin-top: 40px;
+  margin-left: 80px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.7em;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+ .orders > div, .chats > div {
+   overflow-x: auto;
+   white-space: nowrap;
+ }
+
+
+ .orders > div {
+    margin-bottom: 12%;
+    text-align: start;
+    text-indent: 0.3rem;
+    width: 15rem;
+    padding: 2px 0 2px 0;
+    border: solid 4px rgba(232, 232, 242, 1);
+ }
+
+
+ .chat-name {
+   margin-top: 20px;
+   margin-left: 40px;
+   font-family: "PT Sans", sans-serif;
+   font-size: 1.7rem;
+   display: inline-flex;
+   color: rgba(232, 232, 242, 1);
+ }
+
+.chat-url a {
+ text-decoration: none;
+ color: rgba(232, 232, 242, 1);
+
+}
+
+ .my-chat {
+   display: inline-flex;
+   flex-direction: column;
+   margin-top: 20px;
+   margin-left: 40px;
+   font-family: "PT Sans", sans-serif;
+   font-size: 1.7em;
+
+ }
+
+.chats {
+  margin-top: 40px;
+  margin-left: 80px;
+}
+
+ .chats > div {
+    margin-bottom: 12%;
+    text-align: start;
+    text-indent: 0.3rem;
+    width: 15rem;
+    padding: 2px 0 2px 0;
+    border: solid 4px rgba(232, 232, 242, 1);
+ }
+
+
+
+
+@media (min-width: 768px) and (max-width:1024px) {
+  .border-logo {
+    margin-left: 3rem;
+  }
+
+  .border-logo::before {
+    left: 40%;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1024px) and (orientation: landscape) {
+  .border-logo::before {
+    left: 30%;
+  }
+}
+ @media (max-width: 767px) {
+  .border-logo {
+    display: none;
+  }
+  .my-ship {
+    margin-left: 0;
+  }
+  .my-chat {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .orders {
+    margin-left: 20px;
+  }
+  .chats {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 767px) and (orientation:landscape) {
+ .border-logo {
+   display: block;
+   margin-left: 5rem;
+ }
+
+ .border-logo::before {
+   left: 45%;
+ }
+}

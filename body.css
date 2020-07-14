@@ -1,0 +1,23 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+body a {
+  text-decoration: none;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  text-decoration: none;
+}
+
+.nav a {
+  color: #e8e8f2;
+}

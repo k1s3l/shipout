@@ -1,0 +1,44 @@
+#header {
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 10%;
+}
+
+#header img {
+  width: 85px;
+}
+
+.change-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+#oldpass, #password, #new-pass {
+  border: 4px solid #fdcba8;
+  padding: 3px 3px 3px 3px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.submit {
+  margin-top: 20px;
+  border: 4px solid #fdcba8;
+}
+
+#sign-in {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: "PT Sans", sans-serif;
+  padding-bottom: 2px;
+  color: #ab7692;
+}
+
+.unknown-password {
+  margin-top: 20px;
+  font-family: "PT Sans", sans-serif;
+  color: red;
+}

@@ -1,0 +1,168 @@
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+main {
+  /* Чтобы занимал оставшееся пространство */
+  flex-grow: 1;
+  margin-bottom: 3rem;
+}
+
+footer {
+  /* Чтобы footer не уменьшался */
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  text-decoration: none;
+}
+
+.logo-left {
+ display: inherit;
+ flex-direction: row;
+}
+
+.logo {
+  margin-top: 15%;
+  margin-left: 15%;
+}
+
+.logo2 {
+  margin-left: 10%;
+  margin-top: 25%;
+  font-family: "Odibee Sans", cursive;
+  font-size: 2em;
+}
+
+.logo img {
+width: 64px;
+}
+
+.logo2 a {
+  text-decoration: inherit;
+  color: rgba(232, 232, 242, 1);
+}
+
+.logo-center::after {
+  position: absolute;
+  content: '';
+  width: 240px;
+  height: 6px;
+  background: rgba(232, 232, 242, 1);
+  margin-top: 59px;
+  margin-left: -408px;
+}
+
+.logo-center::before {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 40px;
+  background: rgba(232, 232, 242, 1);
+  margin-top: 25px;
+  margin-left: -15px;
+}
+
+.logo-center {
+    margin-left: 20%;
+    margin-top: 2%;
+
+}
+
+.logo-center img {
+  width: 378px;
+  border: solid 4px rgb(253, 203, 168);
+  padding: 5px 5px 5px 5px;
+}
+
+.menu {
+  margin-left: 55px;
+  margin-top: 3%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.7em;
+}
+
+.account-pic {
+  display: table-cell;
+  height: 60px;
+  width: 60px;
+  border: solid 4px rgba(253, 203, 168, 1);
+  vertical-align: middle;
+  text-align: center;
+  color: rgba(232, 232, 242, 1);
+}
+
+.setting {
+  display: table;
+  vertical-align: middle;
+  width: 240px;
+  height: 30px;
+  text-indent: 10px;
+  color: rgba(253, 210, 181, 1);
+}
+
+.setting > div {
+  margin-top: 20px;
+  border: solid 4px rgba(232, 232, 242, 1);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.copyright {
+  display: block;
+  position: absolute;
+  background: #dedede;
+  left: 0;
+  width: 100%;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 10px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+}
+
+.rules {
+  margin-left: 70%;
+}
+
+footer .rules a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer .rules a:hover {
+  color: #0000ff;
+}
+
+.copy {
+  margin-left: 2%;
+}
+
+@media (width:1024px) and (orientation: landscape) {
+  .rules {
+    margin-left: 60%;
+  }
+}
+
+@media (min-width:481px) and (max-width:1023px) {
+  .rules {
+    margin-left: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-center {
+    display: none;
+  }
+
+  .menu {
+    margin-top: 2%;
+  }
+
+  .rules {
+    margin-left: 4%;
+  }
+}

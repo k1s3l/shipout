@@ -1,0 +1,111 @@
+.nav {
+  display: inline-flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.logo2 {
+  margin-left: 18px;
+  font-family: "Odibee Sans", cursive;
+  font-size: 2em;
+  align-self: center;
+}
+
+.logo2 a {
+  color: #e8e8f2;
+}
+
+.border-logo {
+  margin-left: 55%;
+  margin-top: 10px;
+  border-top: solid 4px #fdcba8;
+  padding-top: 5px;
+}
+
+.border-logo img {
+  padding-left: 20px;
+}
+
+.border-logo:after {
+  content: '';
+  height: 4px;
+  background: #fdcba8;
+  position: absolute;
+  width: 50px;
+  top: 38px;
+}
+
+.border-logo:before {
+  content: '';
+  height: 4px;
+  background: #fdcba8;
+  position: absolute;
+  width: 290px;
+  top: 72px;
+  left: 500px;
+}
+
+.shops-list {
+  display: inline-flex;
+  align-items: flex-start;
+  width: 70%;
+  margin-left: 20%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.shops-list img {
+  width: 100%;
+  max-height: 100px;
+}
+
+.shops-list > div {
+  margin-right: 7%;
+  margin-top: 7%;
+  border: solid 4px #fdcba8;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+  cursor: pointer;
+  max-width: 128px;
+  width: 128px;
+  height: 100px;
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+  .border-logo {
+    display: none;
+  }
+
+  .shops-list {
+    justify-content: flex-start;
+    margin-left: 5%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .border-logo {
+    display: none;
+  }
+
+  .shops-list {
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .row {
+    max-width: 64px;
+    width: 64px;
+  }
+}

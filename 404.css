@@ -1,0 +1,12 @@
+body {
+  background-image: url(https://shipout.ru/img/404.jpg);
+}
+
+.error{
+  color: white;
+  display: flex;
+  font-size: 4rem;
+  justify-content: center;
+  font-family: 'Odibee Sans', 'cursive';
+  -webkit-user-select: none;
+}

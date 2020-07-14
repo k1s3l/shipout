@@ -1,0 +1,138 @@
+.nav {
+  display: inline-flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.logo2 {
+  margin-left: 18px;
+  font-family: "Odibee Sans", cursive;
+  font-size: 2em;
+  align-self: center;
+}
+
+.logo2 a {
+  color: #e8e8f2;
+}
+
+.border-logo {
+  margin-left: 55%;
+  margin-top: 10px;
+  border-top: solid 4px #fdcba8;
+  padding-top: 5px;
+}
+
+.border-logo img {
+  padding-left: 20px;
+}
+
+.border-logo:after {
+  content: '';
+  height: 4px;
+  background: #fdcba8;
+  position: absolute;
+  width: 50px;
+  top: 38px;
+}
+
+.border-logo:before {
+  content: '';
+  height: 4px;
+  background: #fdcba8;
+  position: absolute;
+  width: 290px;
+  top: 72px;
+  left: 500px;
+}
+
+
+input[type='text'], input[type='submit'] {
+  border: 0;
+  background: none;
+  color: rgba(232, 232, 242, 1);
+  font-size: medium;
+}
+
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 2.2rem;
+  margin-left: 9rem;
+  max-width: 16rem;
+}
+
+
+.menu > div {
+  display: flex;
+  justify-content: center;
+  margin-right: 2rem;
+  font-family: "PT Sans", sans-serif;
+  min-width: 15rem;
+  border: solid 4px #fdcba8;
+  margin-bottom: 2rem;
+}
+
+#form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.border-search {
+  margin-left: 20px;
+  border: solid 3px #fdcba8;
+}
+
+input[type="search"]{
+  border:none;
+}
+
+.menu > div a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+  font-size: 1.5rem;
+  color: rgba(232, 232, 242, 1);
+}
+
+@media (min-width:768px) and (max-width: 1023px) {
+  .border-logo {
+    display: block;
+    margin-left: 10rem;
+  }
+
+  .border-logo::before {
+    left: 26rem;
+  }
+}
+@media (max-width: 767px) {
+  .border-logo {
+    display: none;
+  }
+
+  .menu {
+    margin-left: 1.3rem;
+  }
+}
+
+@media (max-width: 767px) and (orientation:landscape) {
+  .menu {
+    margin-left: 1.3rem;
+  }
+  .border-logo {
+    display: block;
+    margin-left: 6rem;
+  }
+
+  .border-logo::before {
+    left: 22rem;
+  }
+}

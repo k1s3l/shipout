@@ -1,0 +1,58 @@
+.nav {
+  display: inline-flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.logo2 {
+  margin-left: 18px;
+  font-family: "Odibee Sans", cursive;
+  font-size: 2em;
+  align-self: center;
+}
+
+.logo2 a {
+  color: #e8e8f2;
+}
+
+.border-logo {
+  margin-left: 55%;
+  margin-top: 10px;
+  border-top: solid 4px #fdcba8;
+  padding-top: 5px;
+}
+
+.border-logo img {
+  padding-left: 20px;
+}
+
+.border-logo:after {
+  content: '';
+  height: 4px;
+  background: #fdcba8;
+  position: absolute;
+  width: 50px;
+  top: 38px;
+}
+
+.border-logo:before {
+  content: '';
+  height: 4px;
+  background: #fdcba8;
+  position: absolute;
+  width: 290px;
+  top: 72px;
+  left: 500px;
+}
+
+main {
+  margin-left: 20px;
+  margin-top: 40px;
+  font-family: 'PT Sans';
+  color: rgb(232, 125, 242);
+}

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "sign-in.css",
+	"sources": [
+		"../sass/sign-in.scss"
+	],
+	"sourcesContent": [
+		"$borderColor: 4px solid rgba(253, 203, 168, 1);\r\n$signColor: rgba(171, 118, 146, 1);\r\n$signFont: \"PT Sans\", sans-serif;\r\n\r\n#header {\r\n  text-align: center;\r\n  margin-left: 40%;\r\n  margin-right: 40%;\r\n  margin-top: 10%;\r\n  img {\r\n    width: 85px;\r\n  }\r\n}\r\n\r\n.password-login {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  margin-top: 80px;\r\n}\r\n\r\n#login {\r\nmargin-bottom: 20px;\r\n}\r\n\r\n#login, #password {\r\n  border: $borderColor;\r\n  padding: 3px 3px 3px 3px;\r\n  width: 300px;\r\n}\r\n\r\n.submit {\r\n  margin-top: 20px;\r\n  border: $borderColor;\r\n}\r\n\r\n#sign-in {\r\n  border: 0;\r\n  background: none;\r\n  cursor: pointer;\r\n  font-family: $signFont;\r\n  padding-bottom: 2px;\r\n  color: $signColor;\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": ";AAIA,AAAA,OAAO,CAAC;EACN,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,YAAY,EAAE,GAAG;EACjB,UAAU,EAAE,GAAG;CAIhB;;;AARD,AAKE,OALK,CAKL,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;CACZ;;;AAGH,AAAA,eAAe,CAAC;EACd,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,IAAI;CACjB;;;AAED,AAAA,MAAM,CAAC;EACP,aAAa,EAAE,IAAI;CAClB;;;AAED,AAAA,MAAM,EAAE,SAAS,CAAC;EAChB,MAAM,EA1BM,GAAG,CAAC,KAAK,CAAC,OAAsB;EA2B5C,OAAO,EAAE,eAAe;EACxB,KAAK,EAAE,KAAK;CACb;;;AAED,AAAA,OAAO,CAAC;EACN,UAAU,EAAE,IAAI;EAChB,MAAM,EAjCM,GAAG,CAAC,KAAK,CAAC,OAAsB;CAkC7C;;;AAED,AAAA,QAAQ,CAAC;EACP,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,OAAO;EACf,WAAW,EAtCF,SAAS,EAAE,UAAU;EAuC9B,cAAc,EAAE,GAAG;EACnB,KAAK,EAzCK,OAAsB;CA0CjC"
+}

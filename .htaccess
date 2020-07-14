@@ -1,0 +1,26 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !^/server.php [OR]
+RewriteCond %{REQUEST_URI} !^/server
+
+RewriteEngine On
+
+RewriteBase /
+ErrorDocument 404 /404
+ErrorDocument 403 /404
+ErrorDocument 401 /404
+ErrorDocument 500 /404
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+# RewriteRule ^confirm-email/([a-zA-Z0-9_-]+)$ confirm-email?code=$1
+# RewriteRule ^confirm-email/([a-zA-Z0-9_-]+)/$ confirm-email?code=$1
+#php_flag log_errors Off
+#php_flag display_errors Off
+#php_flag display_startup_errors Off
+#php_value default_socket_timeout 301
