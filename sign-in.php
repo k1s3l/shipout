@@ -32,14 +32,14 @@
             $rowLogin = $rowData['login'];
             $rowPass = $rowData['password'];
           }
-	   
-  if(isset($_POST['h-captcha-response']) && !empty($_POST['h-captcha-response']))
-  {
-        $secret = '0xEdb51e1beF57962367365961c5318779ea8A54E4';
-        $verifyResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$secret.'&response='.$_POST['h-captcha-response'].'&remoteip='.$_SERVER['REMOTE_ADDR']);
-        $responseData = json_decode($verifyResponse);
-        if($responseData->success)
-        {
+
+  #if(isset($_POST['h-captcha-response']) && !empty($_POST['h-captcha-response']))
+  #{
+  #      $secret = '0xEdb51e1beF57962367365961c5318779ea8A54E4';
+  #      $verifyResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$secret.'&response='.$_POST['h-captcha-response'].'&remoteip='.$_SERVER['REMOTE_ADDR']);
+  #      $responseData = json_decode($verifyResponse);
+  #      if($responseData->success)
+  #      {
 if (isset($_POST['submit'])) {
             if(empty($_POST['login']) || empty($_POST['password'])){
               echo "<div class='already-taken'>Заполните поля</div>";
@@ -56,20 +56,19 @@ if (isset($_POST['submit'])) {
       foreach($data as $row) {
         $first_name = $row['first_name'];
       }
-#      session_start();
         $_SESSION['login'] = $_POST['login'];
         $_SESSION['fname'] = $first_name;
         header('Location: /');
          }
        }
      }
-   }
-        else
-        {
-            echo "<div class='already-taken'>Captcha not valid</div>";
-        }
-   }
-          
+   #}
+  #      else
+  #      {
+  #          echo "<div class='already-taken'>Captcha not valid</div>";
+  #      }
+  # }
+
 
 ?>
       </div>
