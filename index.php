@@ -14,6 +14,7 @@
     <div class="nav">
       <div class="logo-left">
           <div class="logo2"><a href="/">Freeship</a></div>
+          <div class="switch"><div class="switch-button" id="theme"></div></div>
           </div>
     <div class="sign-help">
     <div class="sign-in" id="sign-in">
@@ -51,6 +52,7 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/65588731" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<script defer async src="/js/theme-button.js"></script>
 </footer>
 </body>
 </html>

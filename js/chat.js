@@ -35,7 +35,7 @@ $(document).ready(function(){ function ajax(options) {
 					let matchUrl = val.match(/(https?:\/\/)?([\w-]{1,32}\.[\w-]{1,32})[^\s@]*/gm);
 					if(matchUrl !== null){
 					for(let increment = 0, _increment = shopArray.length; increment < _increment; increment++){
-					let shopRegExp = new RegExp('((https:\/\/)|(https:\/\/www\.)|(www\.))?' + shopArray[increment] + '\.[^ ]*', 'gi'); // 0 �� i � ����� ��������
+					let shopRegExp = new RegExp('((https:\/\/)|(https:\/\/www\.)|(www\.))?' + shopArray[increment] + '\.[^ ]*', 'gi'); 
 					let shopUrl = val.match(shopRegExp);
 					for(let inc = 0, _inc = matchUrl.length; inc < _inc; inc++){
 						if(shopUrl !== null){
@@ -49,7 +49,7 @@ $(document).ready(function(){ function ajax(options) {
 					}
 					for(let inc = 0, _inc = matchUrl.length; inc < _inc; inc++){
 						let shopUrl = matchUrl[inc].replace(/\?[^ ]+/, '');
-							 matchUrl[inc] = '<a href="https://' + matchUrl[inc] + '">' + shopUrl + '</a>';  // ������� '">'
+							 matchUrl[inc] = '<a href="https://' + matchUrl[inc] + '">' + shopUrl + '</a>';
 					}
 					for(let inc = 0, _inc = matchUrl.length; inc < _inc; inc++){
 						let url = val.match(/(https?:\/\/)?([\w-]{1,32}\.[\w-]{1,32})[^\s@]*/gm);
@@ -58,8 +58,8 @@ $(document).ready(function(){ function ajax(options) {
 						if(httpsUrl == null){
 						val = val.replace(url[inc], matchUrl[inc]);
 						}else{
-						matchUrl[inc] = matchUrl[inc].replace(/\"https:\/\//, ''); // ������� ��� ���
-						matchUrl[inc] = matchUrl[inc].replace(/\">/, '>'); // ������� ��� ���
+						matchUrl[inc] = matchUrl[inc].replace(/\"https:\/\//, '');
+						matchUrl[inc] = matchUrl[inc].replace(/\">/, '>');
 						val = val.replace(url[inc], matchUrl[inc]);
 						}
 					}

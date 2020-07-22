@@ -1,8 +1,28 @@
+:root{
+  --body-bg-color: white;
+  --nav-a-color: #e8e8f2;
+  --all-border: solid 4px #fdcba8;
+  --all-border-radius: 0px;
+  --webkit-box-shadow-light: -2px 3px 8px 11px rgba(232, 232, 242, 0.52);
+  --moz-box-shadow-light: -2px 3px 8px 11px rgba(232, 232, 242, 0.52);
+  --box-shadow-light: -2px 3px 8px 11px rgba(232, 232, 242, 0.52);
+}
+:root[theme="dark"]{
+  --body-bg-color: rgba(18, 20, 22, 1);
+  --nav-a-color: rgba(108, 108, 108, 1);
+  --all-border: solid 4px rgba(36, 36, 36, 1);
+  --all-border-radius: 5px;
+  --webkit-box-shadow-light: 0;
+  --moz-box-shadow-light: 0;
+  --box-shadow-light: 0;
+}
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background: var(--body-bg-color);
+  user-select: none;
 }
 
 body a {
@@ -19,7 +39,62 @@ footer {
 }
 
 .nav a {
-  color: #e8e8f2;
+  color: var(--nav-a-color);
+}
+
+.switch {
+  border: var(--all-border);  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  padding: 2px 2px 2px 2px;
+
+
+}
+
+.switch-button {
+  width: 15px;
+  height: 15px;
+  align-self: center;
+  background: red;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.button-on {
+  animation-name: switch-on;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.button-off {
+  animation-name: switch-off;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes switch-on {
+  from {
+    margin-left: 0px;
+  }
+
+  to {
+    margin-left: 25px;
+  }
+}
+
+@keyframes switch-off {
+  from {
+    margin-left: 25px;
+  }
+
+  to {
+    margin-left: 0px;
+  }
 }
 
 main {
@@ -33,12 +108,13 @@ main {
 }
 
 .shop-partner {
-  border: solid 4px #fdcba8;
+  border: var(--all-border);
   padding: 5px 5px 1px 5px;
   margin-left: auto;
-  -webkit-box-shadow: -2px 3px 8px 11px rgba(232, 232, 242, 0.52);
-  -moz-box-shadow: -2px 3px 8px 11px rgba(232, 232, 242, 0.52);
-  box-shadow: -2px 3px 8px 11px rgba(232, 232, 242, 0.52);
+  -webkit-box-shadow: var(--webkit-box-shadow-light);
+  -moz-box-shadow: var(--moz-box-shadow-light);
+  box-shadow: var(--box-shadow-light);
+  border-radius: var(--all-border-radius);
 }
 
 .logo-left {
@@ -68,8 +144,9 @@ main {
 .sign-help a {
   font-family: "Odibee Sans", cursive;
   font-size: 1.6em;
-  border: solid 4px #fdcba8;
+  border: var(--all-border);
   padding: 2px 10px 2px 10px;
+  border-radius: var(--all-border-radius);
 }
 
 .sign-in {
@@ -89,7 +166,7 @@ main {
   transition-property: opacity, visibility;
   transition-duration: 0.3s;
   transition-delay: 0.4s;
-  border: solid 4px #fdcba8;
+  border: var(--all-border);
   margin-top: 10px;
   position: absolute;
   right: 100px;
@@ -103,10 +180,12 @@ main {
 }
 
 .submit {
-  border: solid 2px #fdcba8;
+  border: var(--all-border);
   margin: 8px 8px 5px 8px;
   display: flex;
   justify-content: center;
+  border-radius: var(--all-border-radius);
+
 }
 
 .sign-in:hover #sign-auth {
@@ -130,9 +209,11 @@ main {
 .order-together a {
   font-family: "Odibee Sans", cursive;
   font-size: 1.8em;
-  border: solid 4px #fdcba8;
+  border: var(--all-border);
   padding: 0px 20px 0px 20px;
   color: #e8e8f2;
+  border-radius: var(--all-border-radius);
+
 }
 
 .orders {
