@@ -43,4 +43,5 @@ if (!isset($_SESSION['login']) || (empty($_SESSION['login']))) {
       }
         ?>
           </div>
+          <script defer async src="/js/theme.js"></script>
 </body>
