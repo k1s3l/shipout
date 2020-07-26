@@ -37,8 +37,6 @@ if (!isset($_SESSION['login']) || (empty($_SESSION['login']))) {
     if($shopMatch == 0 || $cityMatch == 0){
       header("Location: /");
     }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -61,7 +59,7 @@ if (!isset($_SESSION['login']) || (empty($_SESSION['login']))) {
           <div class="chat-border">
             <div id="create-chat">+</div>
           </div>
-          <?php //GET-параметры должны соответствовать значениям массивов
+          <?php
           if(isset($_POST['submit'])){
             if( trim($_POST['text']) == ''){
       echo  "<form method=\"post\" id=\"form-chat\" style=\"display:flex\">" .
@@ -94,14 +92,12 @@ if (!isset($_SESSION['login']) || (empty($_SESSION['login']))) {
                 <div class="border-input"><input type="submit" value="Создать чат" id="button" name="submit"></div></form></div>';
         }
             ?>
-
-
         <div class="menu">
           <?php
           include 'check.php';
           $shop = $_GET['shop'];
           $city = $_GET['city'];
-          $stmtPDO = $pdo->prepare('SELECT * FROM chatInfo WHERE shopOrders = ? AND city = ?');
+          $stmtPDO = $pdo->prepare('SELECT * FROM chatInfo WHERE shop_id = ? AND city_id = ?');
           $stmtPDO->bindParam(1, $shop);
           $stmtPDO->bindParam(2, $city);
           $stmtPDO->execute();
@@ -111,7 +107,7 @@ if (!isset($_SESSION['login']) || (empty($_SESSION['login']))) {
             echo '<div class="user-party">' . "<a href=\"order$keyChatId\">" . $keyName . '</a></div>';
           }
           ?>
-          <!-- <div class="user-party"><a href="orders">Нытик</a></div> -->
           </div>
           <script src="js/chat-rooms.js"></script>
+          <script defer async src="/js/theme.js"></script>
 </body>

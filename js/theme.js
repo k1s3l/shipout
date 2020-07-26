@@ -3,3 +3,4 @@ if(localStorage.theme == 1){
 }else{
   document.documentElement.removeAttribute("theme");
 }
+//document.querySelector('.h-captcha').setAttribute(data-theme, "dark");

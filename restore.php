@@ -48,8 +48,10 @@ $statementPDO = $pdo->exec('CREATE TABLE ' . chatInfoTable .
   shop_id INT(11) NOT NULL,
   name VARCHAR(64) NOT NULL,
   chat_id INT(5) NOT NULL,
+  city_id INT(5) NOT NULL,
   PRIMARY KEY(id),
-  FOREIGN KEY(shop_id) REFERENCES ' . shopsTable . '(id)
+  FOREIGN KEY(shop_id) REFERENCES ' . shopsTable . '(id),
+  FOREIGN KEY(city_id) REFERENCES ' . cityTable . '(id)
 )');
 
 $statementPDO = $pdo->exec('CREATE TABLE ' . chatMessageTable .
@@ -61,5 +63,6 @@ $statementPDO = $pdo->exec('CREATE TABLE ' . chatMessageTable .
   PRIMARY KEY(userMessageId),
   FOREIGN KEY(user_id) REFERENCES ' . dataTable . '(id)
 )');
+
 
 ?>

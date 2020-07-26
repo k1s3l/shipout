@@ -1,3 +1,18 @@
+:root{
+  --body-bg-color: white;
+  --all-border: solid 4px #fdcba8;
+  --all-border-radius: 0px;
+}
+:root[theme="dark"]{
+  --body-bg-color: rgba(18, 20, 22, 1);
+  --all-border: solid 4px rgba(36, 36, 36, 1);
+  --all-border-radius: 5px;
+}
+
+body {
+  background: var(--body-bg-color);
+}
+
 #header {
   display: flex;
   justify-content: center;
@@ -34,15 +49,19 @@
 }
 
 #login, #password {
-  border: 4px solid #fdcba8;
+  border: var(--all-border);
+  border-radius: var(--all-border-radius);
   padding: 3px 3px 3px 3px;
   width: 280px;
+  background: var(--body-bg-color);
+  color: grey;
 }
 
 .submit {
   margin-top: 20px;
   margin-bottom: 20px;
-  border: 4px solid #fdcba8;
+  border: var(--all-border);
+  border-radius: var(--all-border-radius);
   align-self: center;
 }
 

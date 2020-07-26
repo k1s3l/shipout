@@ -35,7 +35,7 @@ if (!isset($_SESSION['login']) || (empty($_SESSION['login']))) {
             <?php
             include 'check.php';
             $loginCookie = $_SESSION['login'];
-            $stmtPDO = $pdo->prepare('SELECT DISTINCT chat_id FROM chatMessage WHERE login = ?');
+            $stmtPDO = $pdo->prepare('SELECT DISTINCT chat_id FROM chatMessage WHERE chat_id = ?');
             $stmtPDO->bindParam(1, $loginCookie);
             $stmtPDO->execute();
             foreach($stmtPDO as $key){
@@ -45,3 +45,5 @@ if (!isset($_SESSION['login']) || (empty($_SESSION['login']))) {
              ?>
               </div>
         </div>
+        <script defer async src="/js/theme.js"></script>
+</body>

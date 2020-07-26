@@ -1,3 +1,25 @@
+:root{
+  --body-bg-color: white;
+  --nav-a-color: #e8e8f2;
+  --all-border: solid 4px #fdcba8;
+  --all-border-radius: 0px;
+  --before-color: rgba(253, 203, 168, 1);
+  --after-color: rgba(253, 203, 168, 1);
+}
+
+:root[theme="dark"]{
+  --body-bg-color: rgba(18, 20, 22, 1);
+  --nav-a-color: rgba(108, 108, 108, 1);
+  --all-border: solid 4px rgba(36, 36, 36, 1);
+  --all-border-radius: 5px;
+  --before-color: rgba(36, 36, 36, 1);
+  --after-color: rgba(36, 36, 36, 1);
+}
+
+body {
+  background: var(--body-bg-color);
+}
+
 .nav {
   display: inline-flex;
   flex-direction: row;
@@ -7,6 +29,7 @@
 
 .nav a {
   text-decoration: none;
+  color: var(--nav-a-color);
 }
 
 .logo2 {
@@ -16,14 +39,11 @@
   align-self: center;
 }
 
-.logo2 a {
-  color: #e8e8f2;
-}
 
 .border-logo {
   margin-left: 55%;
   margin-top: 10px;
-  border-top: solid 4px #fdcba8;
+  border-top: var(--all-border);
   padding-top: 5px;
 }
 
@@ -34,7 +54,7 @@
 .border-logo:after {
   content: '';
   height: 4px;
-  background: #fdcba8;
+  background: var(--before-color);
   position: absolute;
   width: 50px;
   top: 38px;
@@ -43,7 +63,7 @@
 .border-logo:before {
   content: '';
   height: 4px;
-  background: #fdcba8;
+  background: var(--before-color);
   position: absolute;
   width: 290px;
   top: 72px;
@@ -58,7 +78,7 @@
 }
 
 .chat-border {
-  border: solid 4px #fdcba8;
+  border: var(--all-border);
   display: flex;
   justify-content: center;
   max-height: 4rem;
@@ -100,7 +120,8 @@ form {
 
 .border-input {
   margin-left: 20px;
-  border: solid 3px #fdcba8;
+  border: var(--all-border);
+  border-radius: var(--all-border-radius);
 
 }
 

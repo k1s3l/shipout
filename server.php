@@ -11,7 +11,6 @@ $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 socket_set_option($socket, SOL_SOCKET, SO_REUSEADDR, 1);
 socket_bind($socket, 0, $port);
 socket_listen($socket);
-
 $clientSocketArray = array($socket);
 
 while (true) {
@@ -25,19 +24,18 @@ while (true) {
 		$header = socket_read($newSocket, 2048);
 		$clientSocketArray[] = $newSocket;
 		$chat->sendHeaders($header, $newSocket, $ipAddr, $port);
-                $newSocketArrayIndex = array_search($socket, $newSocketArray);
+    $newSocketArrayIndex = array_search($socket, $newSocketArray);
 		unset($newSocketArray[$newSocketArrayIndex]);
 
 }
 
 foreach($newSocketArray as $newSocketArrayResource) {
-		//1
 		$bytesocketLength = @socket_recv($newSocketArrayResource, $socketData, 1024, 0);
 		while($bytesocketLength >=  1) {
 				include 'check.php';
 				$socketMessage = $chat->unseal($socketData);
 				$messageObj = json_decode($socketMessage);
-				if($messageObj->fname !== null || $messageObj->val !== null || $messageObj->time !== null || $messageObj->roomID !== null || $messageObj->login !== null){ #��� ������ � ��������� ������� ��� ������������ � ������� ���� ������ ���� � ��������� � �����������
+				if($messageObj->fname !== null || $messageObj->val !== null || $messageObj->time !== null || $messageObj->roomID !== null || $messageObj->login !== null){
 			  $chatMessage = $chat->createChatMessage($messageObj->fname, $messageObj->val, $messageObj->time, $messageObj->roomID);
 				$chat->send($chatMessage,$clientSocketArray);
 				$stmtPDOquery = $pdo->prepare('INSERT INTO chatMessage (login, message, posted_at, chat_id) VALUES (?, ?, NOW(), ?)');
@@ -47,18 +45,10 @@ foreach($newSocketArray as $newSocketArrayResource) {
 				$stmtPDOquery->execute();
 			}
 			break 2;
-		}
-		///2
-#		if($socketData === false) {
-#				socket_getpeername($newSocketArrayResource, $client_ip_address);
-#				$connectionACK = $chat->newDisconectedACK($client_ip_address);
-#				$chat->send($connectionACK,$clientSocketArray);
-#
-#				$newSocketArrayIndex = array_search($newSocketArrayResource, $clientSocketArray);
-#				unset($clientSocketArray[$newSocketArrayIndex]);
+			}
 		}
 }
-#}
+
 socket_close($socket);
 
 ?>

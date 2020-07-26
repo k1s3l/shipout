@@ -1,8 +1,26 @@
+:root{
+  --body-bg-color: white;
+  --nav-a-color: #e8e8f2;
+  --all-border: solid 4px #fdcba8;
+  --all-border-radius: 0px;
+  --before-color: rgba(253, 203, 168, 1);
+  --after-color: rgba(253, 203, 168, 1);
+}
+:root[theme="dark"]{
+  --body-bg-color: rgba(18, 20, 22, 1);
+  --nav-a-color: rgba(108, 108, 108, 1);
+  --all-border: solid 4px rgba(36, 36, 36, 1);
+  --all-border-radius: 5px;
+  --before-color: rgba(36, 36, 36, 1);
+  --after-color: rgba(36, 36, 36, 1);
+}
+
 body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   min-height: 100vh;
+  background: var(--body-bg-color);
 }
 
 main {
@@ -51,7 +69,7 @@ width: 64px;
   content: '';
   width: 240px;
   height: 6px;
-  background: rgba(232, 232, 242, 1);
+  background: var(--after-color);
   margin-top: 59px;
   margin-left: -408px;
 }
@@ -61,7 +79,7 @@ width: 64px;
   content: '';
   width: 6px;
   height: 40px;
-  background: rgba(232, 232, 242, 1);
+  background: var(--before-color);
   margin-top: 25px;
   margin-left: -15px;
 }
@@ -74,7 +92,7 @@ width: 64px;
 
 .logo-center img {
   width: 378px;
-  border: solid 4px rgb(253, 203, 168);
+  border: var(--all-border);
   padding: 5px 5px 5px 5px;
 }
 
@@ -90,7 +108,7 @@ width: 64px;
   display: table-cell;
   height: 60px;
   width: 60px;
-  border: solid 4px rgba(253, 203, 168, 1);
+  border: var(--all-border);
   vertical-align: middle;
   text-align: center;
   letter-spacing: 4px;
@@ -108,7 +126,7 @@ width: 64px;
 
 .setting > div {
   margin-top: 20px;
-  border: solid 4px rgba(232, 232, 242, 1);
+  border: var(--all-border);
   cursor: pointer;
 }
 

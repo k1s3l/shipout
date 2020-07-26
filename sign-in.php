@@ -33,13 +33,6 @@
             $rowPass = $rowData['password'];
           }
 
-  #if(isset($_POST['h-captcha-response']) && !empty($_POST['h-captcha-response']))
-  #{
-  #      $secret = '0xEdb51e1beF57962367365961c5318779ea8A54E4';
-  #      $verifyResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$secret.'&response='.$_POST['h-captcha-response'].'&remoteip='.$_SERVER['REMOTE_ADDR']);
-  #      $responseData = json_decode($verifyResponse);
-  #      if($responseData->success)
-  #      {
 if (isset($_POST['submit'])) {
             if(empty($_POST['login']) || empty($_POST['password'])){
               echo "<div class='already-taken'>Заполните поля</div>";
@@ -62,14 +55,6 @@ if (isset($_POST['submit'])) {
          }
        }
      }
-   #}
-  #      else
-  #      {
-  #          echo "<div class='already-taken'>Captcha not valid</div>";
-  #      }
-  # }
-
-
 ?>
       </div>
         <div class="password"><input type="password" required placeholder="password" id="password" name="password"></div>
@@ -81,4 +66,5 @@ if (isset($_POST['submit'])) {
       </div>
     </form>
   </body>
+  <script defer async src="/js/theme.js"></script>
 </html>

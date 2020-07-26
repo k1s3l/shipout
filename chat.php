@@ -25,15 +25,6 @@ class Chat
 		socket_write($newSocket, $strHeadr, strlen($strHeadr));
 	}
 
-	#public function newConnectionACK($client_ip_address) {
-	#		$message = "New client ". $client_ip_address.' connected';
-	#		$messageArray = [
-	#				"message" => $message,
-	#				"type" => "newConnectionACK"
-	#		];
-	#		$ask = $this->seal(json_encode($messageArray));
-	#		return $ask;
-	#}
 
 	public function seal($socketData) {
 			$b1 = 0x81;
@@ -63,7 +54,6 @@ class Chat
 			];
 
 			return $this->seal(json_encode($messageArray));
-	// послать на onmessage и распарсить
 	}
 
 	public function send($val,$clientSocketArray) {
@@ -96,7 +86,7 @@ class Chat
 
 			$socketStr = "";
 
-			for($i = 0; $i < strlen($data); ++$i) { // ТУТ РАСПАРСИВАЮТСЯ ДАННЫЕ
+			for($i = 0; $i < strlen($data); ++$i) {
 					$socketStr .= $data[$i] ^ $mask[$i%4];
 			}
 
@@ -104,16 +94,6 @@ class Chat
 
 	}
 
-
-#	public function newDisconectedACK($client_ip_address) {
-#			$message = "Client ". $client_ip_address.' disconnected';
-#			$messageArray = [
-#					"message" => $message,
-#					"type" => "newConnectionACK"
-#			];
-#			$ask = $this->seal(json_encode($messageArray));
-#			return $ask;
-#	}
 
 }
 

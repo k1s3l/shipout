@@ -1,8 +1,28 @@
+:root{
+  --body-bg-color: white;
+  --nav-a-color: #e8e8f2;
+  --all-border: solid 4px #fdcba8;
+  --all-border-radius: 0px;
+  --before-color: rgba(253, 203, 168, 1);
+  --after-color: rgba(253, 203, 168, 1);
+}
+
+:root[theme="dark"]{
+  --body-bg-color: rgba(18, 20, 22, 1);
+  --nav-a-color: rgba(108, 108, 108, 1);
+  --all-border: solid 4px rgba(36, 36, 36, 1);
+  --all-border-radius: 5px;
+  --before-color: rgba(36, 36, 36, 1);
+  --after-color: rgba(36, 36, 36, 1);
+}
+
+
 body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   min-height: 100vh;
+  background: var(--body-bg-color);
 }
 
 main {

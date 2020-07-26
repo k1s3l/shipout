@@ -43,5 +43,6 @@ if (!isset($_SESSION['login']) || (empty($_SESSION['login']))) {
       <footer class="contentinfo">
         <div class="copyright"><span class="copy">&copy; 2020 ship_out </span><span class="rules"><a href="/help">Конфиденциальность и cookie-файлы</a> / <a href="/help">Правила и условия</a></span></div>
      </footer>
+     <script defer async src="/js/theme.js"></script>
 </body>
 </html>

@@ -99,4 +99,5 @@ if (!isset($_SESSION['login']) || (empty($_SESSION['login']))) {
     </div>
       </main>
               <script src="js/chat.js"></script>
+              <script defer async src="/js/theme.js"></script>
     </body>

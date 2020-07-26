@@ -96,8 +96,6 @@
   }
 }
 
-
-
 ?>
 </div>
    <div class="login"><input type="login" required placeholder="Логин" name="login"></div>
@@ -111,4 +109,5 @@
 		<div class="h-captcha" data-sitekey="0df7d0f7-8713-4aca-bb7e-dd33d36424c8" data-theme="light" data-error-callback="onError"></div>
       </div>
       <div class="auth"><div class="submit"><input type="submit" id="sign-in" value="Sign in" name="submit"></div></form>
+      <script defer async src="/js/theme.js"></script>
       </body>
